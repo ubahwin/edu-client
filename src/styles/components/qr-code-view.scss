@@ -1,12 +1,14 @@
+$qrwidth: 320px;
+
 .qr-container {
   display: flex;
 
   margin-top: 5%;
 
   .qr-code {
-    margin-left: 24px;
-    height: 256px;
-    width: 256px;
+    margin-left: 48px;
+    height: $qrwidth;
+    width: $qrwidth;
   }
 
   .qr-title {
@@ -20,6 +22,8 @@
   }
 
   .qr-description-container {
+    margin-top: 24px;
+    color: rgb(179, 179, 179);
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.6px;
@@ -28,6 +32,10 @@
       margin-left: 16px;
       margin-top: 8px;
     }
+  }
+
+  .qr-subcontainer {
+    width: $qrwidth;
   }
 
   .qr-divider {

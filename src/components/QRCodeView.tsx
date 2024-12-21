@@ -8,7 +8,7 @@ const QRCodeView = () => {
   useEffect(() => {
     if (qrCodeRef.current !== null) {
       qrCodeRef.current.innerHTML = vkQr.createQR('Text to encode', {
-        qrSize: 256,
+        qrSize: 320,
         isShowLogo: false
       })
     }
@@ -16,11 +16,11 @@ const QRCodeView = () => {
 
   return (
     <div className="qr-container">
-      <div>
+      <div className="qr-subcontainer">
         <span className="qr-title">
           Отсканируйте с помощью <span className="qr-title-vdovin-id">VdovinID</span>
         </span>
-        <div className="qr-divider"></div>
+
         <div className="qr-description-container">
           <span className="qr-description">Сайт получит эти разрешения:</span>
           <ul className="qr-description-ul">
