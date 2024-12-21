@@ -1,0 +1,22 @@
+.login-button {
+  display: flex;
+  align-items: center;
+
+  padding: 12px 24px;
+
+  background: white;
+
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.6px;
+
+  border-radius: 16px;
+  border: solid 2px #000;
+
+  .qrcodick {
+    height: 50px;
+    width: auto;
+
+    padding-right: 8px;
+  }
+}

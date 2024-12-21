@@ -1,0 +1,49 @@
+.qr-container {
+  display: flex;
+
+  margin-top: 5%;
+
+  .qr-code {
+    margin-left: 24px;
+    height: 256px;
+    width: 256px;
+  }
+
+  .qr-title {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+
+    .qr-title-vdovin-id {
+      color: rgb(41, 151, 100);
+    }
+  }
+
+  .qr-description-container {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+
+    .qr-description-ul {
+      margin-left: 16px;
+      margin-top: 8px;
+    }
+  }
+
+  .qr-divider {
+    height: 1px;
+    margin: 16px;
+    background: black;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .qr-code {
+      margin: 0 0 16px;
+    }
+
+    & {
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+  }
+}
