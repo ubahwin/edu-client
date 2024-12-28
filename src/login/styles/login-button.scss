@@ -13,6 +13,16 @@
   border-radius: 16px;
   border: solid 2px #000;
 
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  &:hover {
+    -webkit-box-shadow: 6px 9px 8px 0px rgba(149, 166, 178, 0.2);
+    -moz-box-shadow: 6px 9px 8px 0px rgba(149, 166, 178, 0.2);
+    box-shadow: 6px 9px 8px 0px rgba(149, 166, 178, 0.2);
+  }
+
   .qrcodick {
     height: 50px;
     width: auto;

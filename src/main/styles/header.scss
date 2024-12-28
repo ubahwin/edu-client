@@ -1,0 +1,49 @@
+$height: 100px;
+$horizontalPadding: 34px;
+
+.pre-header {
+  padding-top: $height;
+}
+
+.header-container {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: $height;
+  width: 100%;
+
+  backdrop-filter: blur(10px);
+
+  .title {
+    padding-left: $horizontalPadding;
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    //letter-spacing: 0.4px;
+  }
+}
+
+.header-buttons {
+  display: flex;
+  padding-right: $horizontalPadding;
+}
+
+.header-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-left: $horizontalPadding;
+
+  img {
+    width: 48px;
+    height: 48px;
+  }
+}

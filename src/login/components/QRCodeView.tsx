@@ -1,13 +1,17 @@
-import React, {useEffect, useRef} from 'react'
-import '@styles/components/qr-code-view.scss'
+import React, { useEffect, useRef } from 'react'
+import '@/login/styles/qr-code-view.scss'
 import vkQr from '@vkontakte/vk-qr'
 
-const QRCodeView = () => {
+interface QRCodeViewProps {
+  qrCodePayload: string
+}
+
+const QRCodeView = ({ qrCodePayload }: QRCodeViewProps) => {
   const qrCodeRef = useRef<SVGSVGElement>(null)
 
   useEffect(() => {
     if (qrCodeRef.current !== null) {
-      qrCodeRef.current.innerHTML = vkQr.createQR('Text to encode', {
+      qrCodeRef.current.innerHTML = vkQr.createQR(qrCodePayload, {
         qrSize: 320,
         isShowLogo: false
       })
@@ -26,7 +30,7 @@ const QRCodeView = () => {
           <ul className="qr-description-ul">
             <li>Имя</li>
             <li>Фамилия</li>
-            <li>Почта</li>
+            <li>Номер телефона</li>
           </ul>
         </div>
       </div>
