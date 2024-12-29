@@ -1,16 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import LoginPage from '@/login/LoginPage.tsx'
 import MainPage from '@/main/MainPage.tsx'
+import { useAuth } from '@/state/AuthProvider.tsx'
 
 const App = () => {
-  const [isLoggined, setIsLoggined] = useState(true)
-
-  const handleLoginComplete = () => {
-    setIsLoggined(true)
-  }
+  const { isLoginned } = useAuth()
 
   return (
-    isLoggined ? <MainPage/> : <LoginPage onComplete={handleLoginComplete}/>
+    isLoginned ? <MainPage/> : <LoginPage/>
   )
 }
 

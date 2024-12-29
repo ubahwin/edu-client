@@ -1,0 +1,26 @@
+.course {
+  display: flex;
+  justify-content: space-between;
+  //align-items: center;
+
+  padding-top: 24px;
+
+  width: 60%;
+
+  .course-title {
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    padding-bottom: 8px;
+  }
+
+  .course-description {
+    font-weight: 400;
+    letter-spacing: 0.4px;
+  }
+
+  .course-image {
+    width: 136px;
+    height: 136px;
+    border-radius: 50%;
+  }
+}

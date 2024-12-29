@@ -1,0 +1,48 @@
+.account-container {
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .account-info {
+    width: 80%;
+    margin: 32px;
+
+    font-size: 24px;
+    letter-spacing: 1px;
+
+    .account-info-cell {
+      display: flex;
+      padding-bottom: 8px;
+    }
+
+    .account-info-title {
+      width: 50%;
+      font-weight: bold;
+    }
+
+    .account-info-description {
+      width: 50%;
+    }
+  }
+
+  .account-button-exit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 56px;
+
+    background: rgb(217, 61, 66);
+    color: white;
+    border-radius: 18px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+

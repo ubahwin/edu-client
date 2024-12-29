@@ -4,15 +4,11 @@ import QRCodeView from '@/login/components/QRCodeView.tsx'
 import '@/login/styles/login-page.scss'
 import axios from 'axios'
 
-interface LoginPagePayload {
-  onComplete: () => void
-}
-
 interface QRCodeResponse {
   qr_code: string
 }
 
-const LoginPage = ({ onComplete }: LoginPagePayload) => {
+const LoginPage = () => {
   const [qrCodePayload, setQrCodePayload] = useState<string>('')
 
   const handleLoginButton = async () => {
