@@ -1,7 +1,10 @@
 import React from 'react'
 import '@/main/styles/account-page.scss'
+import { useAuth } from '@/state/AuthProvider.tsx'
 
 const AccountPage = () => {
+  const { logout } = useAuth()
+
   return (
     <div className="account-container">
       <div className="account-info">
@@ -20,7 +23,7 @@ const AccountPage = () => {
           <div className="account-info-description">ivan@mail.ru</div>
         </div>
       </div>
-      <div className="account-button-exit">Выйти</div>
+      <div className="account-button-exit" onClick={logout}>Выйти</div>
     </div>
   )
 }

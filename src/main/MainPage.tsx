@@ -25,9 +25,9 @@ const MainPage = () => {
       })
   }
 
-  useEffect(() => {
-    loadCources()
-  }, [])
+  // useEffect(() => {
+  //   loadCources()
+  // }, [])
 
   const mockCourses: Course[] = [
     {
@@ -142,7 +142,7 @@ const MainPage = () => {
             <AccountPage/>
           ) : (
             mockCourses.map((course) => (
-              <CourceCell course={course}/>
+              <CourceCell key={course.id} course={course}/>
             ))
           )
         }
