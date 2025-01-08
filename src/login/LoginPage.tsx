@@ -17,8 +17,8 @@ const LoginPage = () => {
   const { login } = useAuth()
 
   const handleLoginButton = async () => {
-    axios.post<QRCodeResponse>('http://45.9.74.253:8080/auth', {
-      redirect_uri: 'http://45.9.74.253:8081/token',
+    axios.post<QRCodeResponse>('https://auth.qrauth.ru/auth', {
+      redirect_uri: 'https://edu.qrauth.ru/token',
       scope: 'basic,phone'
     })
       .then(({ data }) => {
@@ -30,7 +30,7 @@ const LoginPage = () => {
   }
 
   useEffect(() => {
-    const ws = new WebSocket('ws://45.9.74.253:7070/ws')
+    const ws = new WebSocket('wss://edu.qrauth.ru/ws')
 
     // Открытие соединения и отправка параметра
     ws.onopen = () => {
