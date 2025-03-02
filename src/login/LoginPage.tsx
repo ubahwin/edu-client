@@ -23,14 +23,15 @@ const LoginPage = () => {
     })
       .then(({ data }) => {
         setQrCodePayload(data.qr_code)
+        openWebsocket(data.qr_code)
       })
       .catch((error) => {
         console.log(error)
       })
   }
 
-  useEffect(() => {
-    const ws = new WebSocket('wss://edu.qrauth.ru/ws')
+  const openWebsocket = (path: string) => {
+    const ws = new WebSocket(`wss://edu.qrauth.ru/ws/${path}`)
 
     // Открытие соединения и отправка параметра
     ws.onopen = () => {
@@ -64,7 +65,7 @@ const LoginPage = () => {
         ws.close()
       }
     }
-  }, [])
+  }
 
   return (
     error !== null ? (

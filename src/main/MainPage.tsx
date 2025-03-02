@@ -29,108 +29,66 @@ const MainPage = () => {
   //   loadCources()
   // }, [])
 
-  const mockCourses: Course[] = [
+  const mockCourses = [
     {
       id: 1,
-      title: 'Introduction to React',
-      description: 'Learn the basics of React, including components, hooks, and state management.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/swag-wallpaper?seed=${Math.random()}`
+      title: 'Введение в React',
+      description: 'Изучите основы React, включая компоненты, хуки и управление состоянием.',
+      imageUrl: 'https://img.icons8.com/?size=160&id=asWSSTBrDlTW&format=png'
     },
     {
       id: 2,
-      title: 'Advanced TypeScript',
-      description: 'Master TypeScript features like generics, utility types, and decorators.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/random-image?seed=${Math.random()}`
+      title: 'Продвинутый TypeScript',
+      description: 'Освойте возможности TypeScript, такие как дженерики, утилитарные типы и декораторы.',
+      imageUrl: 'https://img.icons8.com/?size=160&id=Xf1sHBmY73hA&format=png'
     },
     {
       id: 3,
-      title: 'JavaScript Essentials',
-      description: 'Get started with JavaScript, the language of the web, and learn core programming concepts.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/swag-wallpaper?seed=${Math.random()}`
+      title: 'Основы JavaScript',
+      description: 'Познакомьтесь с JavaScript, языком веб-разработки, и изучите основные концепции программирования.',
+      imageUrl: 'https://img.icons8.com/?size=96&id=oWebJmNFm7y0&format=png'
     },
     {
       id: 4,
-      title: 'CSS for Beginners',
-      description: 'Learn how to style websites with CSS, including layouts, animations, and responsive design.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/random-image?seed=${Math.random()}`
+      title: 'CSS для начинающих',
+      description: 'Научитесь стилизовать сайты с помощью CSS, включая макеты, анимации и адаптивный дизайн.',
+      imageUrl: 'https://img.icons8.com/?size=160&id=1044&format=png'
     },
     {
       id: 5,
-      title: 'HTML Crash Course',
-      description: 'Understand the fundamentals of HTML and build your first web pages from scratch.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/swag-wallpaper?seed=${Math.random()}`
+      title: 'Краткий курс по HTML',
+      description: 'Поймите основы HTML и создайте свои первые веб-страницы с нуля.',
+      imageUrl: 'https://img.icons8.com/?size=160&id=v8RpPQUwv0N8&format=png'
     },
     {
       id: 6,
-      title: 'Full-Stack Development',
-      description: 'Become a full-stack developer by mastering front-end and back-end technologies.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/random-image?seed=${Math.random()}`
+      title: 'Full-Stack разработка',
+      description: 'Станьте full-stack разработчиком, освоив технологии фронтенда и бэкенда.',
+      imageUrl: 'https://img.icons8.com/?size=160&id=94158&format=png'
     },
     {
       id: 7,
-      title: 'Python for Data Science',
-      description: 'Learn Python and its libraries for data analysis, visualization, and machine learning.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/random-image?seed=${Math.random()}`
+      title: 'Python для Data Science',
+      description: 'Изучите Python и его библиотеки для анализа данных, визуализации и машинного обучения.',
+      imageUrl: 'https://img.icons8.com/?size=160&id=94158&format=png'
     },
     {
       id: 8,
-      title: 'SQL and Databases',
-      description: 'Explore SQL and learn how to interact with relational databases efficiently.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/swag-wallpaper?seed=${Math.random()}`
+      title: 'SQL и базы данных',
+      description: 'Изучите SQL и научитесь эффективно работать с реляционными базами данных.',
+      imageUrl: 'https://img.icons8.com/?size=96&id=3764&format=png'
     },
     {
       id: 9,
-      title: 'Node.js Fundamentals',
-      description: 'Learn how to build server-side applications using Node.js and Express.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/random-image?seed=${Math.random()}`
+      title: 'Основы Node.js',
+      description: 'Научитесь создавать серверные приложения с использованием Node.js и Express.',
+      imageUrl: 'https://img.icons8.com/?size=160&id=94158&format=png'
     },
     {
       id: 10,
-      title: 'Vue.js Basics',
-      description: 'Discover how to build dynamic user interfaces with Vue.js.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/random-image?seed=${Math.random()}`
-    },
-    {
-      id: 11,
-      title: 'DevOps Essentials',
-      description: 'Understand the principles of DevOps and learn tools like Docker and Kubernetes.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/random-image?seed=${Math.random()}`
-    },
-    {
-      id: 12,
-      title: 'Cybersecurity Fundamentals',
-      description: 'Learn how to protect systems and data from cyber threats and vulnerabilities.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/random-image?seed=${Math.random()}`
-    },
-    {
-      id: 13,
-      title: 'Artificial Intelligence',
-      description: 'Get an introduction to AI concepts and explore real-world applications.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/random-image?seed=${Math.random()}`
-    },
-    {
-      id: 14,
-      title: 'React Native for Mobile Apps',
-      description: 'Build cross-platform mobile apps using React Native.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/swag-wallpaper?seed=${Math.random()}`
-    },
-    {
-      id: 15,
-      title: 'UX/UI Design Basics',
-      description: 'Learn how to create intuitive and user-friendly designs for web and mobile.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/random-image?seed=${Math.random()}`
-    },
-    {
-      id: 16,
-      title: 'Blockchain Development',
-      description: 'Dive into blockchain technology and build decentralized applications.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/swag-wallpaper?seed=${Math.random()}`
-    },
-    {
-      id: 17,
-      title: 'Machine Learning with Python',
-      description: 'Understand machine learning algorithms and implement them using Python.',
-      imageUrl: `https://random-image-pepebigotes.vercel.app/api/swag-wallpaper?seed=${Math.random()}`
+      title: 'Основы Vue.js',
+      description: 'Узнайте, как создавать динамические пользовательские интерфейсы с Vue.js.',
+      imageUrl: 'https://img.icons8.com/?size=160&id=94158&format=png'
     }
   ]
 

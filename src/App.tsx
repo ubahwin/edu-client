@@ -5,6 +5,7 @@ import { useAuth } from '@/state/AuthProvider.tsx'
 
 const App = () => {
   const { isLoginned } = useAuth()
+  // const isLoginned = true
 
   return (
     isLoginned ? <MainPage/> : <LoginPage/>

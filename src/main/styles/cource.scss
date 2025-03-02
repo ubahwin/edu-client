@@ -1,11 +1,10 @@
 .course {
   display: flex;
   justify-content: space-between;
-  //align-items: center;
 
-  padding-top: 24px;
+  padding: 20px 32px;
 
-  width: 60%;
+  width: 50%;
 
   .course-title {
     font-weight: 600;
@@ -16,11 +15,18 @@
   .course-description {
     font-weight: 400;
     letter-spacing: 0.4px;
+    padding-right: 30px;
   }
 
   .course-image {
     width: 136px;
     height: 136px;
     border-radius: 50%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-radius: 24px;
+    background-color: #f3f3f3;
   }
 }
